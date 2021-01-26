@@ -5,5 +5,26 @@
   mat-form-field {
     width: 100%;
   }
-
+}
+label{
+  width: 100%;
+  margin: 0px;
+  padding-bottom: 0px!important;
+}
+.p-field{
+  margin: 0px;
+}
+#login-btn{
+  border-radius: 10px;
+  background-color: #dada1c; 
+  color: #0b5590!important;
+  font-weight: bold; 
+}
+#remember-field{
+  margin-top: 25px;
+  margin-left: 88px;
+}
+#remember-label{
+  margin-left: 10px;
+  font-size: 13px;
 }

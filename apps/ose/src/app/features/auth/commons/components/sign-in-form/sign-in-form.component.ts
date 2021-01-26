@@ -3,6 +3,8 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
 import { OseValidators } from '@ose/commons/forms';
 import { SignInCredentials } from '../../../interfaces/sign-in-credentials.interface';
 
+import { PrimeNGConfig } from 'primeng/api';
+
 @Component({
   selector: 'app-sign-in-form',
   templateUrl: './sign-in-form.component.html',
@@ -25,7 +27,10 @@ export class SignInFormComponent implements OnInit {
     return null;
   }
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private primengConfig: PrimeNGConfig
+  ) {
     this.signInForm = this.fb.group({
       email: ['josuebejarano@outlook.com', [Validators.required, OseValidators.email]],
       password: ['jbejarano2020', Validators.required]
@@ -33,6 +38,7 @@ export class SignInFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.primengConfig.ripple = true;
   }
 
   sendData() {
