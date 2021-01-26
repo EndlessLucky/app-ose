@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/theming";
+
+$mat-dark-primary: mat-palette($mat-grey, 900);
+$mat-dark-secondary: mat-palette($mat-grey, 700);
+
+$mat-dark-theme: mat-dark-theme($mat-dark-primary, $mat-dark-secondary);
+
+.dark-theme {
+    @include angular-material-theme($mat-dark-theme);
+    background: #8e8e8e;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+}

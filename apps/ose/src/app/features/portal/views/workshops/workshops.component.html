@@ -1,0 +1,7 @@
+
+<mat-progress-spinner *ngIf="presenter.loading" color="primary" mode="indeterminate"></mat-progress-spinner>  
+<app-workshop-item
+    *ngFor="let workshop of presenter.workshops"
+    [workshop]="workshop"
+    (join)="presenter.joinWorkshop(workshop)">
+</app-workshop-item>

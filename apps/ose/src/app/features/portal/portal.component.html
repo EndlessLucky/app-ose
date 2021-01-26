@@ -1,0 +1,37 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+    <mat-toolbar-row>
+        <span>{{ 'PORTAL.TITLE' | translate }}</span>
+
+        <div>
+          <button mat-button [matMenuTriggerFor]="menu">{{ 'PORTAL.THEME' | translate }}</button>
+          <mat-menu #menu="matMenu">
+              <button mat-menu-item (click)="theme.setLightTheme()">Claro</button>
+              <button mat-menu-item (click)="theme.setDarkTheme()">Oscuro</button>
+          </mat-menu>
+
+          <button *ngIf="!session.isAuthenticated" routerLink="/autenticacion" mat-button>
+            <mat-icon>account_circle</mat-icon>
+            <span>{{ 'PORTAL.LOGIN' | translate }}</span>
+          </button>  
+
+          <button *ngIf="session.isAuthenticated" mat-button
+                  [matMenuTriggerFor]="userMenu">{{ session.user.names }}</button>
+          <mat-menu #userMenu="matMenu">
+              <button mat-menu-item (click)="session.destroy()">{{ 'PORTAL.LOGOUT' | translate }}</button>
+          </mat-menu>
+
+          <button mat-icon-button [matMenuTriggerFor]="langMenu">
+            <mat-icon>language</mat-icon>
+          </button>
+          <mat-menu #langMenu="matMenu">
+            <button mat-menu-item (click)="translate.use('en')">EN</button>
+            <button mat-menu-item (click)="translate.use('es')">ES</button>
+          </mat-menu>
+
+          
+        </div>
+
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

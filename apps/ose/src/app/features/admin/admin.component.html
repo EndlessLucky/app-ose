@@ -1,0 +1,27 @@
+
+<mat-drawer-container>
+  <mat-drawer #drawer class="mat-elevation-z4" mode="side" opened>
+    <app-menu [name]="presenter.name" [options]="presenter.menuOpts"></app-menu>
+  </mat-drawer>
+  <mat-drawer-content>
+    <mat-toolbar color="primary" class="mat-elevation-z8">
+      <mat-toolbar-row>
+        <div>
+          <button mat-icon-button (click)="drawer.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <span>Administrador</span>
+        </div>
+
+        <button (click)="presenter.closeSession()" mat-button>
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Cerrar Sesión</span>
+        </button>
+
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <div class="page-container">
+        <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

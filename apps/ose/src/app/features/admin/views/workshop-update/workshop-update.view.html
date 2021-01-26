@@ -1,0 +1,14 @@
+<app-page-title title="Taller / Actualizar" ></app-page-title>
+
+<app-workshop-upload-poster
+  class="mat-elevation-z4"
+  [poster]="presenter.workshop?.poster"
+  (selected)="presenter.updateWorkshopPoster($event)">
+</app-workshop-upload-poster>
+
+<app-workshop-form 
+  class="mat-elevation-z4"
+  [instructors]="presenter.instructors"
+  [workshop]="presenter.workshop"
+  (save)="presenter.updateWorkshop($event)">
+</app-workshop-form>

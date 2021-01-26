@@ -1,0 +1,7 @@
+<app-page-title title="Taller / Nuevo" ></app-page-title>
+
+<app-workshop-form 
+  class="mat-elevation-z4"
+  [instructors]="presenter.instructors"
+  (save)="presenter.createWorkshop($event)">
+</app-workshop-form>

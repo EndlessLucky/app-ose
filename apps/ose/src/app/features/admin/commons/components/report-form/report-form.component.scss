@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  padding: 20px 20px 0;
+  background: white;
+  width: max-content;
+  margin: auto auto 20px auto;
+  border-radius: 4px;
+
+  mat-form-field:first-child {
+    margin-right: 10px;
+  }
+}

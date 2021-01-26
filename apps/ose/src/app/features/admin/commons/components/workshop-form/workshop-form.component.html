@@ -1,0 +1,54 @@
+<form [formGroup]="form" (ngSubmit)="send()">
+
+  <mat-form-field>
+    <mat-label>Fecha</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <div class="time-fields" >
+    <mat-form-field>
+      <mat-label>Inicio</mat-label>
+      <input matInput type="number" min="0" max="12" formControlName="start">
+    </mat-form-field>
+    <mat-form-field class="meridiem" >
+      <mat-select formControlName="startMeridiem">
+        <mat-option value="pm">PM</mat-option>
+        <mat-option value="am">AM</mat-option>
+      </mat-select>  
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Fin</mat-label>
+      <input matInput type="number" min="0" max="12" formControlName="end">
+    </mat-form-field>
+    <mat-form-field class="meridiem" >
+      <mat-select formControlName="endMeridiem">
+        <mat-option value="pm">PM</mat-option>
+        <mat-option value="am">AM</mat-option>
+      </mat-select>  
+    </mat-form-field>
+  </div>
+  <mat-form-field>
+    <mat-label>Instructores</mat-label>
+    <mat-select formControlName="instructor">
+      <mat-option
+        *ngFor="let instructor of instructors"
+        [value]="instructor.id">{{ instructor.fullName }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Titulo</mat-label>
+    <input matInput formControlName="name">
+    <mat-error *ngIf="nameErrors">{{ nameErrors }}</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <textarea matInput formControlName="description"></textarea>
+  </mat-form-field>
+
+  <div class="actions">
+    <button type="button" mat-button color="warn" >Cancelar</button> 
+    <button type="submit" mat-button color="primary"  >Guardar</button> 
+  </div>
+  
+</form>

@@ -1,0 +1,33 @@
+$header-height: 48px;
+
+
+mat-drawer-container {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    mat-drawer {
+        width: 250px;
+    }
+
+    mat-drawer-content {
+        mat-toolbar {
+            min-height: $header-height;
+            margin-bottom: 20px;
+            mat-toolbar-row {
+                height: $header-height;
+
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        .page-container {
+            padding: 20px 10px;
+        }
+    }
+}
+

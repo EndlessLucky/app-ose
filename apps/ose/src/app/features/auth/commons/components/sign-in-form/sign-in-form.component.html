@@ -1,0 +1,27 @@
+<form [formGroup]="signInForm" (ngSubmit)="sendData()"  >
+
+  <mat-card>
+
+    <h1 mat-card-title>Ingresar</h1>
+
+    <mat-card-content>
+      <mat-form-field appearance="outline">
+        <mat-label>Usuario:</mat-label>
+        <input matInput formControlName="email" >
+        <mat-error *ngIf="emailError">{{ emailError }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Contraseña:</mat-label>
+        <input matInput formControlName="password" [type]="button.type">
+        <ose-button-visibily-password matSuffix #button ></ose-button-visibily-password>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button type="button" mat-button>Registrarse</button>
+      <button mat-button [disabled]="signInForm.invalid" >Ingresar</button>
+    </mat-card-actions>
+
+  </mat-card>
+
+</form>

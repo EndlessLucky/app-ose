@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    display: none;
+  }
+
+  mat-icon {
+    margin-right: 5px;
+  }
+
+  .file-name {
+    font-style: italic;
+    color: lightgrey;
+  }
+}

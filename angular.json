@@ -1,0 +1,170 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "libs",
+  "projects": {
+    "ose": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/ose",
+      "sourceRoot": "apps/ose/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ose",
+            "index": "apps/ose/src/index.html",
+            "main": "apps/ose/src/main.ts",
+            "polyfills": "apps/ose/src/polyfills.ts",
+            "tsConfig": "apps/ose/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/ose/src/favicon.ico",
+              "apps/ose/src/assets"
+            ],
+            "styles": [
+              "apps/ose/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/ose/src/environments/environment.ts",
+                  "with": "apps/ose/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ose:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ose:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ose:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/ose/src/test.ts",
+            "polyfills": "apps/ose/src/polyfills.ts",
+            "tsConfig": "apps/ose/tsconfig.spec.json",
+            "karmaConfig": "apps/ose/karma.conf.js",
+            "assets": [
+              "apps/ose/src/favicon.ico",
+              "apps/ose/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/ose/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/ose/tsconfig.app.json",
+              "apps/ose/tsconfig.spec.json",
+              "apps/ose/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/ose/e2e/protractor.conf.js",
+            "devServerTarget": "ose:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ose:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "ose-commons": {
+      "projectType": "library",
+      "root": "libs/ose-commons",
+      "sourceRoot": "libs/ose-commons/src",
+      "prefix": "ose",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ose-commons/tsconfig.lib.json",
+            "project": "libs/ose-commons/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/ose-commons/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/ose-commons/src/test.ts",
+            "tsConfig": "libs/ose-commons/tsconfig.spec.json",
+            "karmaConfig": "libs/ose-commons/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ose-commons/tsconfig.lib.json",
+              "libs/ose-commons/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ose"
+}

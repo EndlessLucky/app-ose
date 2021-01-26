@@ -1,0 +1,9 @@
+{
+  "HELLO": "Bienvenido {{ name }} <br> asdasdasd",
+  "PORTAL": {
+    "TITLE": "Mi Aplicación",
+    "THEME": "Tema",
+    "LOGIN": "Iniciar Sesión",
+    "LOGOUT": "Cerrar Sesión"
+  }
+}

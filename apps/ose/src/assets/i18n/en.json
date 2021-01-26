@@ -1,0 +1,9 @@
+{
+  "HELLO": "Welcome {{ name }} <br> asdasdasd  ",
+  "PORTAL": {
+    "TITLE": "My App",
+    "THEME": "Theme",
+    "LOGIN": "Login",
+    "LOGOUT": "Logout"
+  }
+}

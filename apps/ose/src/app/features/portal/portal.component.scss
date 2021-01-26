@@ -1,0 +1,13 @@
+
+$header-height: 48px;
+
+mat-toolbar {
+    min-height: $header-height;
+    margin-bottom: 20px;
+    mat-toolbar-row {
+        height: $header-height;
+
+        display: flex;
+        justify-content: space-between;
+    }
+}

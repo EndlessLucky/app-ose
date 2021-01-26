@@ -1,0 +1,17 @@
+<img [src]="workshop.poster | OseDefaultImg">
+
+<div>
+    <h1>{{ workshop.name }}</h1>
+    <p>{{ workshop.description }}</p>
+    <mat-chip-list>
+        <mat-chip>Día {{ workshop.date | OseDate: 'dddd DD MMMM' | titlecase }}</mat-chip>
+        <mat-chip>{{ workshop.timeDisplay }}</mat-chip>
+    </mat-chip-list>
+    <button
+      mat-raised-button
+      [color]="workshop.registered ? 'warn' : 'primary'"
+      (click)="join.emit()">
+      {{ workshop.registered ? 'Cancelar' : 'Registrarse' }}</button>
+</div>
+
+<mat-divider></mat-divider>

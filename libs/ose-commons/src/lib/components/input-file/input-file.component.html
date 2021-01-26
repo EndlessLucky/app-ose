@@ -1,0 +1,12 @@
+
+<span class="file-name">{{ fileName }}</span>
+
+<button mat-raised-button
+        color="primary"
+        (click)="input.click()" 
+        [disabled]="isDisabled">
+  <mat-icon>backup</mat-icon>
+  <span>Seleccionar Archivo</span>
+</button>
+
+<input #input type="file" (change)="onFileChange($event)" >

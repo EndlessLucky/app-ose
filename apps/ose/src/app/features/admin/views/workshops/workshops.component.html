@@ -1,0 +1,8 @@
+
+<app-page-title icon="add" title="Talleres" (add)="presenter.goCreatePage()"></app-page-title>
+
+<app-workshops-table
+  [dataSource]="presenter.dataSource"
+  (edit)="presenter.goUpdatePage($event)"
+  (remove)="presenter.goDeleteModal($event)">
+</app-workshops-table>

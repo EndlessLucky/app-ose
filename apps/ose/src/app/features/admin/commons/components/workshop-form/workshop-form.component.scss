@@ -1,0 +1,30 @@
+:host {
+  display: block;
+  max-width: 90%;
+  background: white;
+  border-radius: 4px;
+  margin: auto;
+  padding: 20px;
+
+  mat-form-field {
+    width: 100%;
+  }
+
+  .time-fields {
+    display: flex;
+
+    mat-form-field {
+      margin-right: 10px;
+    }
+    mat-form-field:last-child {
+      margin-right: 0;
+    }
+    mat-form-field.meridiem {
+      flex: 50px;
+    }
+  }
+
+  .actions {
+    text-align: right;
+  }
+}
