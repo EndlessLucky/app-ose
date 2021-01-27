@@ -1,4 +1,4 @@
-<!-- <form [formGroup]="signInForm" (ngSubmit)="sendData()"  > -->
+<form [formGroup]="signInForm" (ngSubmit)="sendData()"  >
   <p-card [style]="{'width': '400px', 'border-radius': '20px', 'background-color': '#0b5590'}">
     <div class="ui-fluid ">
       <div class="p-field text-center">
@@ -10,13 +10,13 @@
       <div class="p-field text-center">
           <label for="user" class="p-col-12 p-md-2 text-white">USUARIO</label>
           <div class="p-col-12">
-              <input id="user" type="text" pInputText> 
+              <input id="user" type="text" pInputText formControlName="email"> 
           </div>
       </div>
       <div class="p-field text-center">
         <label for="pwd" class="p-col-12 p-md-2 text-white">CONTRASEÑA</label>
         <div class="p-col-12">
-            <input id="pwd" type="text" pInputText> 
+            <input id="pwd" type="text" pInputText formControlName="password"> 
         </div>
       </div>
       <div class="p-field" id="remember-field">
@@ -27,9 +27,9 @@
       </div>
       <div class="p-field text-center">
         <div class="p-col-12">
-          <button pButton type="button" id="login-btn" label="INGRESAR"></button>
+          <button pButton [disabled]="signInForm.invalid" type="submit" id="login-btn" label="INGRESAR"></button>
         </div>        
       </div>
     </div>
   </p-card>
-<!-- </form> -->
+</form>

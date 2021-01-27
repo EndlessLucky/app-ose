@@ -1,0 +1,18 @@
+<form [formGroup]="form" (ngSubmit)="send()">
+
+  <mat-form-field appearance="outline" >
+    <input formControlName="start" matInput [matDatepicker]="startPicker" readonly>
+    <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
+    <mat-datepicker #startPicker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <input formControlName="end" matInput [matDatepicker]="endPicker" readonly>
+    <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
+    <mat-datepicker #endPicker></mat-datepicker>
+  </mat-form-field>
+
+  <button type="submit" mat-icon-button >
+    <mat-icon>search</mat-icon>
+  </button>
+
+</form>
