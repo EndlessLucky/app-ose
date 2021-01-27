@@ -1,16 +1,12 @@
 <div class="p-grid">
-  <div class="p-col">
-    <p-card [style]="{'width': '25rem', 'margin-bottom': '2em'}">
-      <ng-template pTemplate="header">
-        <i class="pi pi-shopping-cart"></i>
-      </ng-template>
-      <p>Punto de Venta</p>
-    </p-card>
-  </div>
-  <div class="p-col">
-    2
-  </div>
-  <div class="p-col">
-    3
-  </div>
+  <ng-container *ngFor = "let item of adminItems">
+    <div class="p-col">
+      <p-card class="admin-item" [style]="{'width': '25rem', 'margin-bottom': '2em', 'padding': '10px',  'border-radius': '30px', 'border': '2px solid grey'}">
+        <ng-template pTemplate="header">
+          <i [class]="item.icon"></i>
+        </ng-template>
+        <p class="admin-text">{{ item.name }}</p>
+      </p-card>
+    </div>
+  </ng-container>  
 </div>
