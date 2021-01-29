@@ -5,11 +5,6 @@ import { UiModule } from '../ui/ui.module';
 import { OseButtonVisibilyPasswordModule } from '@ose/commons/components';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { CardModule } from 'primeng/card';
-import {InputTextModule} from 'primeng/inputtext';
-import {ButtonModule} from 'primeng/button';
-import {CheckboxModule} from 'primeng/checkbox';
-
 const COMPONENTS = [
   SignInFormComponent
 ];
@@ -21,11 +16,7 @@ const COMPONENTS = [
     CommonModule,
     UiModule,
     OseButtonVisibilyPasswordModule,
-    ReactiveFormsModule,
-    CardModule,
-    InputTextModule,
-    ButtonModule,
-    CheckboxModule
+    ReactiveFormsModule
   ]
 })
 export class ComponentsModule { }

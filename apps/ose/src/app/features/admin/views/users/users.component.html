@@ -1,0 +1,35 @@
+<div class="ui-fluid text-center">
+  <div class="p-field">
+    <h1>Usuario</h1>
+    <p-messages [(value)]="msgs"></p-messages>
+    <button pButton type="submit" id="user-btn" label="Nuevo usuario"></button>
+    <p-table [value]="userTables">
+      <ng-template pTemplate="header">
+          <tr>
+              <th style="width: 300px;">EMAIL</th>
+              <th>NOMBRE COMPLETO</th>
+              <th>TELEFONO</th>
+              <th>ADMINISTRADOR?</th>
+              <th>ACTIVO?</th>
+              <th>LOCALES</th>
+              <th></th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-user>
+          <tr>
+              <td>{{user.email}}</td>
+              <td>{{user.name}}</td>
+              <td>{{user.phone}}</td>
+              <td>
+                <i [class]="user.admin"></i>
+              </td>
+              <td>
+                <i [class]="user.active"></i>
+              </td>
+              <td>{{user.local}}</td>
+              <td>Opciones</td>
+          </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>

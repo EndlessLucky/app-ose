@@ -15,8 +15,6 @@ import { ReportChartComponent } from './report-chart/report-chart.component';
 import { ChartsModule } from 'ng2-charts';
 import { ReportFormComponent } from './report-form/report-form.component';
 
-import { CardModule } from 'primeng/card';
-
 const COMPONENTS = [
   MenuComponent,
   WorkshopsTableComponent,
@@ -40,7 +38,7 @@ const COMPONENTS = [
     OseDefaultImgPipeModule,
     OseInputFileModule,
     ChartsModule,
-    CardModule
+
   ]
 })
 export class ComponentsModule { }

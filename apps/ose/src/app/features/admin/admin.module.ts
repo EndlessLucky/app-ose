@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -10,6 +11,9 @@ import { WorkshopUpdateView } from './views/workshop-update/workshop-update.view
 import { InstructorsComponent } from './views/instructors/instructors.component';
 import { DashboardView } from './views/dashboard/dashboard.view';
 
+import { UiModule } from './../auth/commons/ui/ui.module';
+import { UsersComponent } from './views/users/users.component';
+
 @NgModule({
   declarations: [
     AdminComponent,
@@ -17,12 +21,14 @@ import { DashboardView } from './views/dashboard/dashboard.view';
     WorkshopCreateView,
     WorkshopUpdateView,
     InstructorsComponent,
-    DashboardView
+    DashboardView,
+    UsersComponent
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
     AdminCommonsModule,
+    UiModule
   ]
 })
 export class AdminModule { }

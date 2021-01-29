@@ -14,21 +14,21 @@ export class ReportFormComponent {
   form: FormGroup;
 
   adminItems: AdminItem[] = [
-    {icon: 'pi pi-shopping-cart', name: 'Punto de Venta'},
-    {icon: 'pi pi-folder', name: 'Comprobantes'},
-    {icon: 'pi pi-credit-card', name: 'Catálogo'},
-    {icon: 'pi pi-briefcase', name: 'Entidades'},
-    {icon: 'pi pi-flag', name: 'Guías de Remisión'},
-    {icon: 'pi pi-globe', name: 'Compras'},
-    {icon: 'pi pi-file', name: 'Retenciones'},
-    {icon: 'pi pi-file', name: 'Percepciones'},
-    {icon: 'pi pi-file', name: 'Resúmenes de Boletas'},
-    {icon: 'pi pi-globe', name: 'Configuración Principal'},
-    {icon: 'pi pi-users', name: 'Usuaríos'},
-    {icon: 'pi pi-wallet', name: 'Locales y Series'},
-    {icon: 'pi pi-envelope', name: 'Cuentas Bancarias'},
-    {icon: 'pi pi-download', name: 'Api (Integración)'},
-    {icon: 'pi pi-user', name: 'Mi Cuenta'}
+    {icon: 'pi pi-shopping-cart', name: 'Punto de Venta', route: ''},
+    {icon: 'pi pi-folder', name: 'Comprobantes', route: ''},
+    {icon: 'pi pi-credit-card', name: 'Catálogo', route: ''},
+    {icon: 'pi pi-briefcase', name: 'Entidades', route: ''},
+    {icon: 'pi pi-flag', name: 'Guías de Remisión', route: ''},
+    {icon: 'pi pi-globe', name: 'Compras', route: ''},
+    {icon: 'pi pi-file', name: 'Retenciones', route: ''},
+    {icon: 'pi pi-file', name: 'Percepciones', route: ''},
+    {icon: 'pi pi-file', name: 'Resúmenes de Boletas', route: ''},
+    {icon: 'pi pi-globe', name: 'Configuración Principal', route: ''},
+    {icon: 'pi pi-users', name: 'Usuaríos', route: 'users'},
+    {icon: 'pi pi-wallet', name: 'Locales y Series', route: ''},
+    {icon: 'pi pi-envelope', name: 'Cuentas Bancarias', route: ''},
+    {icon: 'pi pi-download', name: 'Api (Integración)', route: ''},
+    {icon: 'pi pi-user', name: 'Mi Cuenta', route: ''}
   ];
 
   constructor(private fb: FormBuilder) {

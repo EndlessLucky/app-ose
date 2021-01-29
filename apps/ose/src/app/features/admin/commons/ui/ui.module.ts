@@ -12,6 +12,14 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
+import {CardModule} from 'primeng/card';
+import {InputTextModule} from 'primeng/inputtext';
+import {ButtonModule} from 'primeng/button';
+import {CheckboxModule} from 'primeng/checkbox';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
+import {TableModule} from 'primeng/table';
+
 @NgModule({
   exports: [
     MatSidenavModule,
@@ -25,7 +33,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    CardModule,
+    InputTextModule,
+    ButtonModule,
+    CheckboxModule,
+    MessagesModule,
+    MessageModule,
+    TableModule
   ]
 })
 export class UiModule { }

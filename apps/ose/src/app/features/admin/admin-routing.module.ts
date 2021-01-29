@@ -10,6 +10,8 @@ import { OseRolesGuard } from '@ose/commons/guards';
 import { UserRol } from '@ose/commons/models';
 import { DashboardView } from './views/dashboard/dashboard.view';
 
+import { UsersComponent } from './views/users/users.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -25,6 +27,7 @@ const routes: Routes = [
         data: { roles: [ UserRol.admin ] },
         component: InstructorsComponent
       },
+      { path: 'users', component: UsersComponent }
     ]
   }
 ];
