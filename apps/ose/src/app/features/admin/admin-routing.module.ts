@@ -12,6 +12,7 @@ import { DashboardView } from './views/dashboard/dashboard.view';
 
 import { UsersComponent } from './views/users/users.component';
 import { UsersEditComponent } from './views/users-edit/users-edit.component';
+import { ReceiptComponent } from './views/receipt/receipt.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,9 @@ const routes: Routes = [
       },
       {
         path: 'users/:phone', component: UsersEditComponent
+      },
+      {
+        path: 'receipt', component: ReceiptComponent
       }
     ]
   }

@@ -20,6 +20,7 @@ import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 import {TableModule} from 'primeng/table';
 import {InputSwitchModule} from 'primeng/inputswitch';
+import {DropdownModule} from 'primeng/dropdown';
 
 @NgModule({
   exports: [
@@ -42,7 +43,8 @@ import {InputSwitchModule} from 'primeng/inputswitch';
     MessagesModule,
     MessageModule,
     TableModule,
-    InputSwitchModule
+    InputSwitchModule,
+    DropdownModule
   ]
 })
 export class UiModule { }

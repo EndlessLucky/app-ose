@@ -15,7 +15,7 @@ export class ReportFormComponent {
 
   adminItems: AdminItem[] = [
     {icon: 'pi pi-shopping-cart', name: 'Punto de Venta', route: ''},
-    {icon: 'pi pi-folder', name: 'Comprobantes', route: ''},
+    {icon: 'pi pi-folder', name: 'Comprobantes', route: 'receipt'},
     {icon: 'pi pi-credit-card', name: 'Catálogo', route: ''},
     {icon: 'pi pi-briefcase', name: 'Entidades', route: ''},
     {icon: 'pi pi-flag', name: 'Guías de Remisión', route: ''},

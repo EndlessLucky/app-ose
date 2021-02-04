@@ -1,0 +1,25 @@
+<div class="ui-fluid text-center">
+  <div class="p-field">
+    <h1>Comprobantes</h1>
+    <div class="p-grid" [style] ="{'justify-content': 'space-between'}">
+      <button pButton type="button" id="user-btn" label="Emitir comprobante(CPE)"></button>
+      <p-dropdown [options]="month" [(ngModel)]="selectedMonthStart" optionLabel="name"></p-dropdown>
+      <p-dropdown [options]="period" [(ngModel)]="selectedPeriodStart" optionLabel="name"></p-dropdown> 
+      <p-dropdown [options]="year" [(ngModel)]="selectedYearStart" optionLabel="name"></p-dropdown>
+      <p-dropdown [options]="month" [(ngModel)]="selectedMonthEnd" optionLabel="name" placeholder="31"></p-dropdown>
+      <p-dropdown [options]="period" [(ngModel)]="selectedPeriodEnd" optionLabel="name" placeholder="diciemb"></p-dropdown>
+      <p-dropdown [options]="year" [(ngModel)]="selectedYearEnd" optionLabel="name"></p-dropdown>
+      <button pButton type="button" id="user-btn" label="Filtrar"></button>
+      <button pButton type="button" id="user-btn" label="Descargar para Excel"></button>
+    </div>
+    <div class="p-grid" [style] ="{'margin-top': '20px', 'justify-content': 'space-between'}">
+      <p-dropdown [options]="filter" [(ngModel)]="selectedFilterOne" optionLabel="name" placeholder="Filtrar por tipo"></p-dropdown>
+      <p-dropdown [options]="filter" [(ngModel)]="selectedFilterTwo" optionLabel="name" placeholder="Buscar por entidad"></p-dropdown>
+      <p-dropdown [options]="filter" [(ngModel)]="selectedFilterThree" optionLabel="name" placeholder="Buscar documento por serie / numero"></p-dropdown>
+    </div>
+    <div class="p-grid" [style] ="{'margin-top': '20px', 'justify-content': 'space-between'}">
+      <p-dropdown [options]="filter" [(ngModel)]="selectedFilterFour" optionLabel="name" placeholder="Filtrar por estado de anulacion"></p-dropdown>
+    </div>
+    <p-messages [(value)]="msgs"></p-messages>       
+  </div>
+</div>
