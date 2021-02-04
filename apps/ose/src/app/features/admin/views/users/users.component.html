@@ -3,7 +3,7 @@
     <h1>Usuario</h1>
     <p-messages [(value)]="msgs"></p-messages>
     <button pButton type="submit" id="user-btn" label="Nuevo usuario"></button>
-    <p-table [value]="userTables">
+    <p-table [value]="userService.userTables">
       <ng-template pTemplate="header">
           <tr>
               <th style="width: 300px;">EMAIL</th>
@@ -27,7 +27,9 @@
                 <i [class]="user.active"></i>
               </td>
               <td>{{user.local}}</td>
-              <td>Opciones</td>
+              <td [routerLink] = "['/administrador/users', user.phone]" [style] ="{'cursor': 'pointer', 'color' : '#2196F3'}" >
+                Opciones
+              </td>
           </tr>
       </ng-template>
     </p-table>

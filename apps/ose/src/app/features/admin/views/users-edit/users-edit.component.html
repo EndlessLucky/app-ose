@@ -1,0 +1,76 @@
+<div class="ui-fluid text-center">  
+  <div class="p-fluid">
+    <div class="p-col-6 p-offset-3">
+      <h1>Editar</h1>
+      <div class="p-field">
+        <label for="email">Email principal!</label>
+        <div class="p-col">
+          <input type="text" id="email" pInputText [(ngModel)]="userService.user[0].email"/>
+        </div>        
+      </div>
+      <div class="p-grid">
+        <div class="p-col-6">
+          <div class="p-field">
+            <label for="password">Password!</label>
+            <div class="p-col">
+              <input type="text" id="password" pInputText/>
+            </div>        
+          </div>
+        </div>
+        <div class="p-col-6">
+          <div class="p-field">
+            <label for="confirm-password">Confirmar Password!</label>
+            <div class="p-col">
+              <input type="text" id="confirm-password" pInputText/>
+            </div>        
+          </div>
+        </div>
+      </div>      
+      <div class="p-field">
+        <label for="name">Nombre completo!</label>
+        <div class="p-col">
+          <input type="text" id="name" pInputText [(ngModel)]="userService.user[0].name"/>
+        </div>        
+      </div>
+      <div class="p-field">
+        <label for="name">Telefono movil(9 caracteres exactos)</label>
+        <div class="p-col">
+          <input type="text" id="name" pInputText [(ngModel)]="userService.user[0].phone"/>
+        </div>        
+      </div>
+      <h1>Permisos para este usuario</h1>
+      <div class="p-col">
+        <p-card [style] ="{'border-radius': '30px'}">
+          Configuracion principal de empresa (Autorizar concuidado)
+          <div class="p-col">
+            <p-inputSwitch [(ngModel)]="configuration[0]"></p-inputSwitch>
+          </div>        
+        </p-card>
+      </div>
+      <div class="p-col">
+        <p-card [style] ="{'border-radius': '30px'}">
+          Consistencia de Comprobantes
+          <div class="p-col">
+            <p-inputSwitch [(ngModel)]="configuration[1]"></p-inputSwitch>
+          </div>        
+        </p-card>
+      </div>
+      <div class="p-col">
+        <p-card [style] ="{'border-radius': '30px'}">
+          Consolidados de Ventas, Guias, Retenciones, Percepciones
+          <div class="p-col">
+            <p-inputSwitch [(ngModel)]="configuration[2]"></p-inputSwitch>
+          </div>        
+        </p-card>
+      </div>
+      <div class="p-col">
+        <p-card [style] ="{'border-radius': '30px'}">
+          POS(Point of Sale)
+          <div class="p-col">
+            <p-inputSwitch [(ngModel)]="configuration[3]"></p-inputSwitch>
+          </div>        
+        </p-card>
+      </div>      
+    </div>   
+  </div>
+</div>

@@ -19,6 +19,7 @@ import {CheckboxModule} from 'primeng/checkbox';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 import {TableModule} from 'primeng/table';
+import {InputSwitchModule} from 'primeng/inputswitch';
 
 @NgModule({
   exports: [
@@ -40,7 +41,8 @@ import {TableModule} from 'primeng/table';
     CheckboxModule,
     MessagesModule,
     MessageModule,
-    TableModule
+    TableModule,
+    InputSwitchModule
   ]
 })
 export class UiModule { }
