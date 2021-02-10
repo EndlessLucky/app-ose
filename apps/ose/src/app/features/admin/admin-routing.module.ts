@@ -14,6 +14,9 @@ import { UsersComponent } from './views/users/users.component';
 import { UsersEditComponent } from './views/users-edit/users-edit.component';
 import { ReceiptComponent } from './views/receipt/receipt.component';
 import { ConfigurationComponent } from './views/configuration/configuration.component';
+import { LocalComponent } from './views/local/local.component';
+import { DocumentComponent } from './views/document/document.component';
+import { ApiComponent } from './views/api/api.component';
 
 const routes: Routes = [
   {
@@ -41,6 +44,15 @@ const routes: Routes = [
       },
       {
         path: 'configuration', component: ConfigurationComponent
+      },
+      {
+        path: 'local', component: LocalComponent
+      },
+      {
+        path: 'document', component: DocumentComponent
+      },
+      {
+        path: 'api', component: ApiComponent
       }
     ]
   }

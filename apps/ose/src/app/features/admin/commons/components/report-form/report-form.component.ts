@@ -20,14 +20,14 @@ export class ReportFormComponent {
     {icon: 'pi pi-briefcase', name: 'Entidades', route: ''},
     {icon: 'pi pi-flag', name: 'Guías de Remisión', route: ''},
     {icon: 'pi pi-globe', name: 'Compras', route: ''},
-    {icon: 'pi pi-file', name: 'Retenciones', route: ''},
-    {icon: 'pi pi-file', name: 'Percepciones', route: ''},
-    {icon: 'pi pi-file', name: 'Resúmenes de Boletas', route: ''},
+    {icon: 'pi pi-file', name: 'Retenciones', route: 'document'},
+    {icon: 'pi pi-file', name: 'Percepciones', route: 'document'},
+    {icon: 'pi pi-file', name: 'Resúmenes de Boletas', route: 'document'},
     {icon: 'pi pi-globe', name: 'Configuración Principal', route: 'configuration'},
     {icon: 'pi pi-users', name: 'Usuaríos', route: 'users'},
-    {icon: 'pi pi-wallet', name: 'Locales y Series', route: ''},
+    {icon: 'pi pi-wallet', name: 'Locales y Series', route: 'local'},
     {icon: 'pi pi-envelope', name: 'Cuentas Bancarias', route: ''},
-    {icon: 'pi pi-download', name: 'Api (Integración)', route: ''},
+    {icon: 'pi pi-download', name: 'Api (Integración)', route: 'api'},
     {icon: 'pi pi-user', name: 'Mi Cuenta', route: ''}
   ];
 

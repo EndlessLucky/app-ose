@@ -1,0 +1,17 @@
+<div class="ui-fluid text-center">
+  <div class="p-field">
+    <h1>Monitoreo de Documentos</h1>
+    <p>Estos documentos estan pendients de ser aceptadas por las SUNAT o el OSE. Si un documento parmanece mas de 7 dias en esta lista debe comunicarse con nosotros.</p>
+    <h3>Filtrar por fecha</h3>
+    <div class="p-grid" [style] ="{'justify-content': 'space-between'}">
+      <p-dropdown [options]="month" [(ngModel)]="selectedMonthStart" optionLabel="name"></p-dropdown>
+      <p-dropdown [options]="period" [(ngModel)]="selectedPeriodStart" optionLabel="name"></p-dropdown> 
+      <p-dropdown [options]="year" [(ngModel)]="selectedYearStart" optionLabel="name"></p-dropdown>
+      <p-dropdown [options]="month" [(ngModel)]="selectedMonthEnd" optionLabel="name" placeholder="31"></p-dropdown>
+      <p-dropdown [options]="period" [(ngModel)]="selectedPeriodEnd" optionLabel="name" placeholder="diciemb"></p-dropdown>
+      <p-dropdown [options]="year" [(ngModel)]="selectedYearEnd" optionLabel="name"></p-dropdown>
+      <button pButton type="button" id="user-btn" label="Filtrar"></button>
+    </div>
+    <p-messages [(value)]="msgs"></p-messages>       
+  </div>
+</div>

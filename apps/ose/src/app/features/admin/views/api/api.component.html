@@ -1,0 +1,50 @@
+<div class="ui-fluid text-center">
+  <div class="p-field">
+    <h1>API - Intregacion</h1>   
+    <div class="p-grid">
+      <div class="p-col-6">
+        <p-card header="Detalles tecnicos">
+          <p [style] = "{'text-align': 'left'}">
+            Para poder usar nuestra API necesitas una RUTA, un TOKEN y un ARCHIVO PLANO(JSON o TXT).<br>
+            RUTA: La peudes conseguir debajo de esta pagina.<br>
+            TOKEN: La puedes conseguir debajo de esta pagina<br>
+            ARCHIVO PLANO: Usamos formatos JSON o TXT para recibir y entregarte la<br> 
+            information de los documentos electronicos por ser un formato de texto ligero para el<br>
+            intercambio de datos
+          </p>
+        </p-card>
+      </div>
+      <div class="p-col-6">
+        <p-card header="Manuales de integracion" [style] = "{'height': '225px'}">
+          <p [style] = "{'text-align': 'left'}">
+            MANUAL para archivo JSON en el link: MANUAL para archivo JSON<br>
+            MANUAL para archivo TXT en el link: MANUAL para archivo TXT<br>
+          </p>
+        </p-card>
+      </div>
+    </div> 
+    <button pButton type="submit" id="user-btn" label="Nuevo TOKEN"></button>   
+    <p-table [value]="userService.apiTables">
+      <ng-template pTemplate="header">
+        <tr>
+          <th style="width: 200px;">LOCAL ASIGNADO</th>
+          <th style="width: 200px;">DESCRIPTION</th>
+          <th>RUTA</th>
+          <th>TOKEN</th>
+          <th style="width: 100px;"></th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-api>
+        <tr>
+          <td>{{api.local}}</td>
+          <td>{{api.description}}</td>
+          <td>{{api.ruta}}</td>
+          <td>{{api.token}}</td>
+          <td [style] ="{'cursor': 'pointer', 'color' : '#2196F3'}" >
+            Opciones
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>

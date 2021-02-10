@@ -16,6 +16,9 @@ import { UsersComponent } from './views/users/users.component';
 import { UsersEditComponent } from './views/users-edit/users-edit.component';
 import { ReceiptComponent } from './views/receipt/receipt.component';
 import { ConfigurationComponent } from './views/configuration/configuration.component';
+import { LocalComponent } from './views/local/local.component';
+import { DocumentComponent } from './views/document/document.component';
+import { ApiComponent } from './views/api/api.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { ConfigurationComponent } from './views/configuration/configuration.comp
     UsersComponent,
     UsersEditComponent,
     ReceiptComponent,
-    ConfigurationComponent
+    ConfigurationComponent,
+    LocalComponent,
+    DocumentComponent,
+    ApiComponent
   ],
   imports: [
     CommonModule,
