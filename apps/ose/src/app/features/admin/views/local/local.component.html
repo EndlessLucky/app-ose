@@ -1,0 +1,38 @@
+<div class="ui-fluid text-center">
+  <div class="p-field">
+    <h1>Locales</h1>
+    <button pButton type="submit" id="user-btn" label="Nuevo local"></button>
+    <p-table [value]="userService.localTables">
+      <ng-template pTemplate="header">
+          <tr>
+              <th style="width: 70px;">CODIGO</th>
+              <th style="width: 110px;">DESCRIPTION</th>
+              <th>UBIGEO(INEI)</th>
+              <th style="width: 150px;">DEPARTAMENTO</th>
+              <th style="width: 100px;">PROVINCIA</th>
+              <th style="width: 100px;">DISTRITO</th>
+              <th style="width: 200px;">DIRECCION EXACTA</th>
+              <th style="width: 500px;">TIPOS DE COMPROBANTES Y SERIES ASIGNADOS</th>
+              <th style="width: 100px;">OFFLINE</th>
+              <th></th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-local>
+          <tr>
+            <td>{{local.codigo}}</td>
+            <td>{{local.description}}</td>
+            <td>{{local.inei}}</td>
+            <td>{{local.department}}</td>
+            <td>{{local.province}}</td>
+            <td>{{local.distrito}}</td>
+            <td>{{local.exacta}}</td>
+            <td [style] = "{'white-space': 'pre-line'}">{{local.tipos}}</td>
+            <td [style] = "{'white-space': 'pre-line'}">{{local.offline}}</td>
+            <td [style] ="{'cursor': 'pointer', 'color' : '#2196F3'}" >
+              Opciones
+            </td>
+          </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>
