@@ -15,6 +15,7 @@ import { UiModule } from './../auth/commons/ui/ui.module';
 import { UsersComponent } from './views/users/users.component';
 import { UsersEditComponent } from './views/users-edit/users-edit.component';
 import { ReceiptComponent } from './views/receipt/receipt.component';
+import { ConfigurationComponent } from './views/configuration/configuration.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ReceiptComponent } from './views/receipt/receipt.component';
     DashboardView,
     UsersComponent,
     UsersEditComponent,
-    ReceiptComponent
+    ReceiptComponent,
+    ConfigurationComponent
   ],
   imports: [
     CommonModule,

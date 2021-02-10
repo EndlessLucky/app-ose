@@ -23,7 +23,7 @@ export class ReportFormComponent {
     {icon: 'pi pi-file', name: 'Retenciones', route: ''},
     {icon: 'pi pi-file', name: 'Percepciones', route: ''},
     {icon: 'pi pi-file', name: 'Resúmenes de Boletas', route: ''},
-    {icon: 'pi pi-globe', name: 'Configuración Principal', route: ''},
+    {icon: 'pi pi-globe', name: 'Configuración Principal', route: 'configuration'},
     {icon: 'pi pi-users', name: 'Usuaríos', route: 'users'},
     {icon: 'pi pi-wallet', name: 'Locales y Series', route: ''},
     {icon: 'pi pi-envelope', name: 'Cuentas Bancarias', route: ''},

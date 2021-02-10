@@ -13,6 +13,7 @@ import { DashboardView } from './views/dashboard/dashboard.view';
 import { UsersComponent } from './views/users/users.component';
 import { UsersEditComponent } from './views/users-edit/users-edit.component';
 import { ReceiptComponent } from './views/receipt/receipt.component';
+import { ConfigurationComponent } from './views/configuration/configuration.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,9 @@ const routes: Routes = [
       },
       {
         path: 'receipt', component: ReceiptComponent
+      },
+      {
+        path: 'configuration', component: ConfigurationComponent
       }
     ]
   }

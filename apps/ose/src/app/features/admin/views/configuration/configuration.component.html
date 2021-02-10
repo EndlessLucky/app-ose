@@ -1,0 +1,68 @@
+<p-accordion>
+  <p-accordionTab header="DATOS DEL EMISOR" [style] = "{'color': 'blue'}">
+    <div class="p-grid">
+      <div class="p-col-4">
+        <div class="p-field">
+          <label for="password">RUC!</label>
+          <div class="p-col">
+            <input type="text" disabled id="ruc" value="20108664640" pInputText/>
+          </div>        
+        </div>
+      </div>
+      <div class="p-col-8">
+        <div class="p-field">
+          <label for="confirm-password">Razon social o nombre completo!</label>
+          <div class="p-col">
+            <input type="text" id="number" [style]="{'width': '100%'}" value="DHMONT S.A.C CONTRATISTAS GENERALES" pInputText/>
+          </div>        
+        </div>
+      </div>
+    </div>
+    <div class="p-grid">
+      <div class="p-col-6">
+        <div class="p-field">
+          <label for="password">Razon comercial(OPCIONAL)</label>
+          <div class="p-col">
+            <input type="text" id="ruc" [style]="{'width': '100%'}" pInputText/>
+          </div>        
+        </div>
+      </div>
+      <div class="p-col-6">
+        <div class="p-field">
+          <label for="confirm-password">Pagina Web(OPCIONAL)</label>
+          <div class="p-col">
+            <input type="text" id="number" [style]="{'width': '100%'}" pInputText/>
+          </div>        
+        </div>
+      </div>
+    </div>
+    <div class="p-grid">
+      <div class="p-col-12">
+        <div class="p-field">
+          <label for="password">Email de esta empresa solo para enviar copias de los CPE</label>
+          <div class="p-col">
+            <input type="text" id="ruc" [style]="{'width': '100%'}" value="vitariomeza86@gmail.com" pInputText/>
+          </div>        
+        </div>
+      </div>      
+    </div>
+    <div class="p-grid">
+      <button pButton type="button" id="accept-btn" label="ACEPTAR"></button>
+    </div>
+  </p-accordionTab>
+  <p-accordionTab header="CONTACTOS DE EMPRESA">
+      Content 2
+  </p-accordionTab>
+  <p-accordionTab header="LOGOTIPO">
+      Content 3    
+  </p-accordionTab>
+  <p-accordionTab header="PERSONALIZAR ARCHIVOS PDF DE FACTURAS, BOLETAS, NOTAS, ETC">
+    Content 3    
+  </p-accordionTab>
+  <p-accordionTab header="CONFIGURACION ADICIONAL">
+    Content 3    
+  </p-accordionTab>
+  <p-accordionTab header="RECUPERAR CDR AUTOMATICAMENTE">
+    Content 3    
+  </p-accordionTab>
+</p-accordion>
